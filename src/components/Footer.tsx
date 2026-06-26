@@ -86,7 +86,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 onClick={() => onNavigate("contact")}
                 className="text-[10px] uppercase font-bold tracking-widest text-primary hover:underline cursor-pointer text-left focus:outline-none"
               >
-                Contact Now
+                Contact
               </button>
             </div>
           </div>
