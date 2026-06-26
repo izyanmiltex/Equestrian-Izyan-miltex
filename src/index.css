@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d4af37;
+  --color-on-primary: #241a00;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-secondary: #c6c6c9;
+  --color-on-secondary: #2f3133;
+  --color-secondary-container: #454749;
+  --color-on-secondary-container: #b4b5b7;
+  --color-tertiary: #ceced1;
+  --color-on-tertiary: #2f3133;
+  --color-tertiary-container: #b2b3b5;
+  --color-on-tertiary-container: #434547;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-background: #0c0f0f;
+  --color-on-background: #e2e2e2;
+  --color-surface: #121414;
+  --color-on-surface: #e2e2e2;
+  --color-surface-variant: #333535;
+  --color-on-surface-variant: #d0c5af;
+  --color-outline: #99907c;
+  --color-outline-variant: #4d4635;
+  --color-inverse-surface: #e2e2e2;
+  --color-inverse-on-surface: #2f3131;
+  --color-inverse-primary: #735c00;
+  --color-surface-dim: #121414;
+  --color-surface-bright: #38393a;
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer utilities {
+  @keyframes shimmer-gold {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #d4af37;
+    background: linear-gradient(110deg, #d4af37 40%, #f9e19b 50%, #d4af37 60%);
+    background-size: 200% 100%;
+    animation: shimmer-gold 6s infinite linear;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-shimmer:hover {
+    animation-duration: 3s;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .luxury-grid {
+    background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+  }
+  
+  .product-vignette {
+    position: relative;
+  }
+  .product-vignette::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
+  }
+
+  .matte-card {
+    background: #1e2020;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+  }
+  
+  .matte-card:hover {
+    border-color: #d4af37;
+  }
+
+  @keyframes hero-pan {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1.0); }
+  }
+  
+  .hero-bg-animate {
+    animation: hero-pan 20s ease-in-out infinite;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #333535;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}

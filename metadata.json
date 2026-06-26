@@ -1,0 +1,6 @@
+{
+  "name": "Izyan Miltex | Kinetic Luxury Manufacturing",
+  "description": "Premium B2B equestrian manufacturing with zero-risk physical prototyping. Handcrafted anatomical saddle pads, turnout blankets, custom leather bridles, and contoured girths.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
