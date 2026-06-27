@@ -6,7 +6,6 @@ import Showroom from "./components/Showroom";
 import Timeline from "./components/Timeline";
 import Testimonials from "./components/Testimonials";
 import SpecBuilder from "./components/SpecBuilder";
-import MainCallToAction from "./components/MainCallToAction";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import ComplianceSpecs from "./components/ComplianceSpecs";
@@ -94,9 +93,6 @@ export default function App() {
             preselectedProductId={selectedProductId}
             onResetPreselection={() => setSelectedProductId(null)}
           />
-
-          {/* Main Call To Action Section */}
-          <MainCallToAction onStartCustomizer={handleStartCustomizer} />
 
           {/* 7. FAQ Accordion */}
           <FaqSection />

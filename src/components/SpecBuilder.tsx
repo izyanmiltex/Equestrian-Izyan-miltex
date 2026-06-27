@@ -18,8 +18,56 @@ export default function SpecBuilder({ preselectedProductId, onResetPreselection 
     }
   }, [preselectedProductId, onResetPreselection]);
 
+  // Load and initialize the Calendly inline widget using the official JS API
+  React.useEffect(() => {
+    const checkAndInit = () => {
+      const win = window as any;
+      if (win.Calendly) {
+        const container = document.getElementById("calendly-inline-container");
+        if (container) {
+          container.innerHTML = "";
+        }
+        win.Calendly.initInlineWidget({
+          url: "https://calendly.com/izyanmiltex/30min",
+          parentElement: container,
+          prefill: {},
+          pageSettings: {
+            backgroundColor: "0c0f0f",
+            textColor: "ffffff",
+            primaryColor: "d4af37",
+            hideLandingPageDetails: true,
+            hideGdprBanner: true,
+          }
+        });
+
+        // Ensure the generated iframe has no grey background and is styled correctly
+        setTimeout(() => {
+          const iframe = container?.querySelector("iframe");
+          if (iframe) {
+            iframe.style.border = "none";
+            iframe.style.height = "100%";
+            iframe.style.width = "100%";
+          }
+        }, 300);
+      }
+    };
+
+    const win = window as any;
+    if (win.Calendly) {
+      checkAndInit();
+    } else {
+      const interval = setInterval(() => {
+        if ((window as any).Calendly) {
+          checkAndInit();
+          clearInterval(interval);
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   return (
-    <section id="spec-builder-section" className="py-20 md:py-32 bg-surface-container-lowest text-white border-t border-white/5 relative overflow-hidden luxury-grid">
+    <section id="spec-builder-section" className="py-20 md:py-32 bg-transparent text-white border-t border-white/5 relative overflow-hidden luxury-grid">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header */}
@@ -35,58 +83,20 @@ export default function SpecBuilder({ preselectedProductId, onResetPreselection 
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           
-          {/* Main Workspace Column - Calendly Embed Space */}
-          <div className="bg-surface-container/40 p-6 md:p-10 border border-white/10 rounded-3xl shadow-2xl relative min-h-[600px] flex flex-col justify-center items-center text-center">
-            {/* Visual ambient element */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
-            
-            <div className="w-full max-w-xl mx-auto flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 animate-pulse">
-                <Calendar className="w-8 h-8" />
-              </div>
-              
-              <h3 className="font-headline text-2xl font-bold uppercase tracking-wider text-white mb-3">
-                Schedule Your Prototype Call
-              </h3>
-              
-              <p className="text-xs text-white/50 uppercase tracking-widest font-mono mb-6">
-                Direct Calendly Integration Space
-              </p>
-              
-              <p className="text-sm text-white/70 font-light mb-8 leading-relaxed">
-                Select your target date on the interactive calendar below to secure your complimentary sample run.
-              </p>
-              
-              {/* This is the elegant space left to add the Calendly iframe or widget */}
-              <div className="w-full bg-surface border border-dashed border-white/20 rounded-2xl p-10 flex flex-col items-center justify-center min-h-[350px] hover:border-primary/50 transition-colors group">
-                <div className="p-4 rounded-xl bg-white/5 mb-4 group-hover:bg-primary/5 transition-colors">
-                  <Sparkles className="w-6 h-6 text-primary" />
-                </div>
-                <span className="text-xs font-mono text-white/40 uppercase tracking-widest block mb-2">
-                  [ Calendly Embed Code Goes Here ]
-                </span>
-                <span className="text-[10px] text-white/30 text-center max-w-sm leading-relaxed mb-6">
-                  Replace this container with your Calendly inline embed HTML/JS code or iframe widget to activate live, seamless scheduling.
-                </span>
-                
-                <a
-                  href="https://calendly.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  referrerPolicy="no-referrer"
-                  className="px-6 py-3 bg-white/10 hover:bg-primary hover:text-black border border-white/10 hover:border-primary text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 flex items-center gap-2 cursor-pointer text-white"
-                >
-                  Configure Calendly ↗
-                </a>
-              </div>
-              
-              {/* Micro NDA Guarantee */}
-              <p className="text-[10px] text-white/40 leading-relaxed font-light mt-8">
-                🛡️ Your designs and intellectual property are protected. Every booking triggers a mutual 2-way non-disclosure agreement before our alignment call begins.
-              </p>
-            </div>
+          {/* Calendly Inline Widget Embed Container */}
+          <div 
+            id="calendly-inline-container" 
+            className="w-full h-[1100px] bg-transparent border-0"
+            style={{ border: "none" }}
+          />
+          
+          {/* Micro NDA Guarantee */}
+          <div className="mt-8 text-center">
+            <p className="text-[11px] text-white/40 leading-relaxed font-light max-w-xl mx-auto">
+              🛡️ Your designs and intellectual property are protected. Every booking triggers a mutual 2-way non-disclosure agreement before our alignment call begins.
+            </p>
           </div>
 
         </div>

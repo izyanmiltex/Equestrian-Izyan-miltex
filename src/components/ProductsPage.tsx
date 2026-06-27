@@ -16,8 +16,9 @@ export default function ProductsPage({ onConfigureProduct }: ProductsPageProps) 
             <Sparkles className="w-6 h-6 animate-pulse" />
             <span className="font-mono text-xs uppercase font-bold tracking-[0.25em]">Factory-Direct Catalog</span>
           </div>
-          <h1 className="font-headline text-3xl md:text-6xl font-extrabold uppercase tracking-tight text-white">
-            Anatomical <span className="text-primary-container">&amp; Kinetic Product Lines</span>
+          <h1 className="font-headline text-3xl md:text-6xl font-extrabold uppercase tracking-tight text-white leading-[1.1]">
+            Anatomical &amp; <br />
+            <span className="text-primary-container">Kinetic Product Lines</span>
           </h1>
           <p className="text-white/60 font-sans text-sm md:text-base max-w-2xl mt-4 leading-relaxed font-light">
             High-spec equestrian lines engineered for elite performance and commercial distribution. Built with premium raw materials and anatomical pressure-relief mapping.

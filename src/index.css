@@ -116,3 +116,23 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
 }
+
+/* Force-suppress inner borders and set transparent bg inside Calendly inline widget container */
+#calendly-inline-container {
+  border: none !important;
+}
+
+#calendly-inline-container iframe {
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Hide the floating Calendly badge widget on mobile screens */
+@media (max-width: 767px) {
+  .calendly-badge-widget {
+    display: none !important;
+  }
+}
+
