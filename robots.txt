@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://equestrian.izyanmiltex.com/sitemap.xml
