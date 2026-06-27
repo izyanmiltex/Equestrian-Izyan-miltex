@@ -3,17 +3,23 @@ import { Sparkles, Calendar, Menu, X, ShieldCheck } from "lucide-react";
 
 interface HeaderProps {
   onStartCustomizer: () => void;
-  onNavigate: (page: "home" | "compliance" | "privacy" | "manufacturing" | "contact") => void;
-  activePage: "home" | "compliance" | "privacy" | "manufacturing" | "contact";
+  onNavigate: (page: "home" | "products" | "compliance" | "privacy" | "manufacturing" | "contact") => void;
+  activePage: "home" | "products" | "compliance" | "privacy" | "manufacturing" | "contact";
 }
 
 export default function Header({ onStartCustomizer, onNavigate, activePage }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
+      
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        setScrollProgress((window.scrollY / totalScroll) * 100);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,13 +44,20 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
   };
 
   return (
-    <header
-      className={`absolute md:fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent py-6 border-b border-white/5 md:border-b-0 ${
-        isScrolled
-          ? "md:bg-background/90 md:backdrop-blur-md md:border-b md:border-white/10 md:py-4 md:shadow-xl"
-          : "md:bg-transparent md:py-8"
-      }`}
-    >
+    <>
+      {/* Yellow Scroll Progress Indicator */}
+      <div 
+        className="fixed top-0 left-0 h-1 bg-[#d4af37] z-[9999] transition-all duration-700"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
+      <header
+        className={`absolute md:fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent py-6 border-b border-white/5 md:border-b-0 ${
+          isScrolled
+            ? "md:bg-background/90 md:backdrop-blur-md md:border-b md:border-white/10 md:py-4 md:shadow-xl"
+            : "md:bg-transparent md:py-8"
+        }`}
+      >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative flex justify-between items-center h-16 md:h-20">
         {/* Left Links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-8 text-[12.8px] font-bold uppercase tracking-[0.2em] text-white/70">
@@ -57,10 +70,12 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
             HOME
           </button>
           <button
-            onClick={() => scrollToSection("showroom")}
-            className="hover:text-primary transition-colors cursor-pointer text-left"
+            onClick={() => onNavigate("products")}
+            className={`hover:text-primary transition-colors cursor-pointer text-left ${
+              activePage === "products" ? "text-primary" : ""
+            }`}
           >
-            PRODUCT SHOWROOM
+            PRODUCTS
           </button>
           <button
             onClick={() => scrollToSection("risk-assessment")}
@@ -77,11 +92,19 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
             className="flex items-center gap-3 cursor-pointer focus:outline-none"
             aria-label="Home"
           >
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTx7jKCSQQMmK3U7XHMIP7vJX1ODLEeefcMUXnBKg_bdmwdqirFxpaWOJ5VQ0DyuofyYxbeGkjdO2alS_O1HBpdiGLIy5LoPRqx9ktmLgWuH8Sf_QCwvsb-JMt3ahiH494JAgACJMPWdyrQwqNspujEC3OoDE5I_TH5JM_UWLKkT9Oypx1rmzNVCJAeGZ4rDQCavGYE9OWvT_XnwMxBL7IQXATTFG-9Y32h9L_W2WtmLdl_iojHAFvzP2RqTd1Cx7XdA"
-              alt="Izyan Miltex Logo"
-              className="h-[59px] md:h-[78px] w-auto object-contain brightness-0 invert transition-all duration-500 hover:scale-105"
-            />
+            <div className="flex flex-col items-center justify-center transition-all duration-500 hover:scale-105 select-none text-primary leading-none">
+              <span 
+                className="text-3xl md:text-4xl font-extrabold tracking-tight"
+                style={{ fontFamily: "'Playfair Display', 'Didot', 'Georgia', serif" }}
+              >
+                IM
+              </span>
+              <span 
+                className="text-[7.5px] md:text-[9.5px] font-bold tracking-[0.3em] uppercase text-primary mt-1 whitespace-nowrap font-sans"
+              >
+                IZYAN MILTEX
+              </span>
+            </div>
           </button>
         </div>
 
@@ -131,10 +154,15 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
               HOME
             </button>
             <button
-              onClick={() => scrollToSection("showroom")}
-              className="text-sm font-bold uppercase tracking-[0.15em] text-white hover:text-primary py-2"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onNavigate("products");
+              }}
+              className={`text-sm font-bold uppercase tracking-[0.15em] hover:text-primary py-2 ${
+                activePage === "products" ? "text-primary" : "text-white"
+              }`}
             >
-              PRODUCT SHOWROOM
+              PRODUCTS
             </button>
             <button
               onClick={() => scrollToSection("risk-assessment")}
@@ -168,5 +196,6 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
         </div>
       )}
     </header>
+    </>
   );
 }

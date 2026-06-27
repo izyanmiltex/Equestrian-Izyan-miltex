@@ -58,7 +58,7 @@ export default function Hero({ onStartCustomizer }: HeroProps) {
             Quality Drops &amp; Poor Fitment?
           </span>
           <br />
-          <span className="text-white">Shift 100% Sourcing Risk To Us</span>
+          <span className="text-white">Sourcing Risk to Our Wallet</span>
         </h1>
 
         {/* Subtitle */}

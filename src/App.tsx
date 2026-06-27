@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import RiskAssessment from "./components/RiskAssessment";
 import Showroom from "./components/Showroom";
 import Timeline from "./components/Timeline";
+import Testimonials from "./components/Testimonials";
 import SpecBuilder from "./components/SpecBuilder";
 import MainCallToAction from "./components/MainCallToAction";
 import FaqSection from "./components/FaqSection";
@@ -12,14 +13,16 @@ import ComplianceSpecs from "./components/ComplianceSpecs";
 import PrivacyWarranty from "./components/PrivacyWarranty";
 import ManufacturingDeck from "./components/ManufacturingDeck";
 import Contact from "./components/Contact";
+import ProductsPage from "./components/ProductsPage";
 import { Bell } from "lucide-react";
 
 export default function App() {
-  const [activePage, setActivePage] = useState<"home" | "compliance" | "privacy" | "manufacturing" | "contact">(() => {
+  const [activePage, setActivePage] = useState<"home" | "products" | "compliance" | "privacy" | "manufacturing" | "contact">(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const pageParam = params.get("page");
       if (
+        pageParam === "products" ||
         pageParam === "compliance" ||
         pageParam === "privacy" ||
         pageParam === "manufacturing" ||
@@ -54,7 +57,7 @@ export default function App() {
     }, 100);
   };
 
-  const handleNavigatePage = (page: "home" | "compliance" | "privacy" | "manufacturing" | "contact") => {
+  const handleNavigatePage = (page: "home" | "products" | "compliance" | "privacy" | "manufacturing" | "contact") => {
     setActivePage(page);
     if (page === "home") {
       window.history.pushState({}, "", window.location.pathname);
@@ -80,6 +83,9 @@ export default function App() {
           {/* 4. Interactive Sourcing Risk Assessment */}
           <RiskAssessment onStartCustomizer={handleStartCustomizer} />
 
+          {/* Testimonials (Reviews & Trustpilot) */}
+          <Testimonials />
+
           {/* 5. The Call Blueprint (Timeline) */}
           <Timeline onStartCustomizer={handleStartCustomizer} />
 
@@ -95,6 +101,10 @@ export default function App() {
           {/* 7. FAQ Accordion */}
           <FaqSection />
         </>
+      )}
+
+      {activePage === "products" && (
+        <ProductsPage onConfigureProduct={handleConfigureProduct} />
       )}
 
       {activePage === "compliance" && (

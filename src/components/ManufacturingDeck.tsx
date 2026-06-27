@@ -46,18 +46,9 @@ export default function ManufacturingDeck({ onBack }: ManufacturingDeckProps) {
   ];
 
   return (
-    <div className="bg-background min-h-screen text-on-background pt-24 pb-16 font-sans">
+    <div className="bg-background min-h-screen text-on-background pt-36 md:pt-44 pb-16 font-sans">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* Back Navigation */}
-        <button
-          onClick={onBack}
-          className="group flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-primary hover:text-white transition-all mb-8 bg-white/5 border border-white/5 hover:border-primary/30 px-4 py-2.5 rounded-full cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          Back to Home Page
-        </button>
-
         {/* Page Header */}
         <div className="border-b border-white/10 pb-8 mb-12">
           <div className="flex items-center gap-3 text-primary mb-3">

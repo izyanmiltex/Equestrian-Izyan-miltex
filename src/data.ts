@@ -19,6 +19,8 @@ export interface ProductLine {
     top: string; // position percentages
     left: string;
   }[];
+  colors?: { name: string; hex: string }[];
+  careType?: "cotton" | "waterproof" | "general";
 }
 
 export const PRODUCT_LINES: ProductLine[] = [
@@ -38,7 +40,13 @@ export const PRODUCT_LINES: ProductLine[] = [
       { id: "sp-1", title: "Anatomical Spine Curve", description: "Contoured to follow the natural arch of the horse's back, lifting pressure entirely off the wither.", top: "15%", left: "50%" },
       { id: "sp-2", title: "3D Air-Spacer Core", description: "Dynamic air circulation matrix that dissipates heat 4.2x faster than traditional batting.", top: "45%", left: "45%" },
       { id: "sp-3", title: "Girth Reinforcement", description: "Ballistic leather reinforcement panels at high-wear zones to guarantee multi-season longevity.", top: "75%", left: "30%" }
-    ]
+    ],
+    colors: [
+      { name: "White Velvet", hex: "#FFFFFF" },
+      { name: "Carbon Black", hex: "#1A1A1A" },
+      { name: "Navy Blue", hex: "#1B2A4A" }
+    ],
+    careType: "cotton"
   },
   {
     id: "horse-rug",
@@ -56,7 +64,12 @@ export const PRODUCT_LINES: ProductLine[] = [
       { id: "hr-1", title: "1680D Ballistic Shell", description: "Extremely tear-resistant waterproof outer shell with premium Teflon stain repel coating.", top: "30%", left: "60%" },
       { id: "hr-2", title: "V-Front Pressure Plate", description: "Bypasses the shoulder joint entirely, alleviating chest pressure and eliminating standard hair-rubbing.", top: "40%", left: "15%" },
       { id: "hr-3", title: "Deep-Cut Tail Flap", description: "Oversized windproof rear barrier with secure magnetic clip tethering.", top: "65%", left: "85%" }
-    ]
+    ],
+    colors: [
+      { name: "Midnight Navy Blue", hex: "#1B2A4A" },
+      { name: "Forest Green", hex: "#1A3322" }
+    ],
+    careType: "waterproof"
   },
   {
     id: "bridle",
@@ -74,7 +87,12 @@ export const PRODUCT_LINES: ProductLine[] = [
       { id: "b-1", title: "Cranial-Relief Crown", description: "Formed ear cutout and widened profile that distributes temple pressure away from critical nerve pathways.", top: "10%", left: "50%" },
       { id: "b-2", title: "Nappa Padded Noseband", description: "Extra-soft, non-constrictive noseband designed to maximize jaw movement and comfort during contact.", top: "55%", left: "32%" },
       { id: "b-3", title: "Solid Marine Brass", description: "Heavy-duty cast buckles that never pit or corrode, guaranteeing absolute reliability in all conditions.", top: "45%", left: "68%" }
-    ]
+    ],
+    colors: [
+      { name: "Ebony Black", hex: "#111111" },
+      { name: "Havana Brown", hex: "#3B2219" }
+    ],
+    careType: "general"
   },
   {
     id: "girth",
@@ -92,7 +110,12 @@ export const PRODUCT_LINES: ProductLine[] = [
       { id: "g-1", title: "Elbow Recess Contour", description: "Sculpted side cutaways that prevent under-arm pinching and skin chafing on every stride.", top: "20%", left: "20%" },
       { id: "g-2", title: "Memory-Foam Sternum Core", description: "Spreads pressure evenly across the breastplate, allowing full lung expansion during gallop.", top: "50%", left: "50%" },
       { id: "g-3", title: "Triple-Layer Elastic Anchors", description: "Marine-grade elastic ends with integrated roller buckles that glide effortlessly when tightening.", top: "80%", left: "80%" }
-    ]
+    ],
+    colors: [
+      { name: "Ebony Black", hex: "#111111" },
+      { name: "Oakbark Brown", hex: "#4A2F13" }
+    ],
+    careType: "general"
   }
 ];
 

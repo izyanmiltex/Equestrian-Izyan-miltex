@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, ShieldCheck, ArrowRight, MessageSquare, Check, Globe } from "lucide-react";
 
 interface FooterProps {
-  onNavigate: (page: "home" | "compliance" | "privacy" | "manufacturing" | "contact") => void;
+  onNavigate: (page: "home" | "products" | "compliance" | "privacy" | "manufacturing" | "contact") => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
@@ -36,17 +36,23 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Logo & Compliance Column (5 Columns) */}
           <div className="lg:col-span-5 flex flex-col gap-6 max-w-md">
-            <div className="flex items-center gap-3">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTx7jKCSQQMmK3U7XHMIP7vJX1ODLEeefcMUXnBKg_bdmwdqirFxpaWOJ5VQ0DyuofyYxbeGkjdO2alS_O1HBpdiGLIy5LoPRqx9ktmLgWuH8Sf_QCwvsb-JMt3ahiH494JAgACJMPWdyrQwqNspujEC3OoDE5I_TH5JM_UWLKkT9Oypx1rmzNVCJAeGZ4rDQCavGYE9OWvT_XnwMxBL7IQXATTFG-9Y32h9L_W2WtmLdl_iojHAFvzP2RqTd1Cx7XdA"
-                alt="Izyan Miltex Logo"
-                className="h-[35px] md:h-[43px] w-auto object-contain"
-              />
+            <div className="flex items-center">
               <button
                 onClick={() => onNavigate("home")}
-                className="font-headline text-lg md:text-2xl font-bold text-primary tracking-[0.3em] uppercase cursor-pointer text-left focus:outline-none"
+                className="flex flex-col items-start gap-1 select-none cursor-pointer focus:outline-none group text-left"
+                aria-label="Home"
               >
-                IZYAN MILTEX
+                <span 
+                  className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary transition-all duration-300 group-hover:scale-105"
+                  style={{ fontFamily: "'Playfair Display', 'Didot', 'Georgia', serif" }}
+                >
+                  IM
+                </span>
+                <span 
+                  className="text-[9px] md:text-[11px] font-bold tracking-[0.35em] uppercase text-primary font-sans transition-all duration-300"
+                >
+                  IZYAN MILTEX
+                </span>
               </button>
             </div>
             
@@ -190,8 +196,15 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         </div>
 
+        {/* SEO Information Block */}
+        <div className="mt-16 pt-8 border-t border-white/5">
+          <p className="font-sans text-[11px] sm:text-xs text-white/30 leading-relaxed font-light text-justify">
+            Izyan Miltex is an enterprise-grade equestrian manufacturing partner specializing in the global export of high-spec stable supplies and tactical equine gear. Our factory-direct catalog features heavy-duty 1200D protective textiles and advanced anatomical premium leatherwork engineered for global distribution networks. Our production capabilities cover heavy-duty turnout rugs, technical shock-absorbing saddle pads, premium grain leather saddles, anatomical monocrown bridles, heavy weighted reins, advanced contour breastplates, anti-pinching leather girths, non-stretch wrapped stirrup straps, and heavy-duty triple-stitch nylon stable halters. We provide flexible sizing distributions and direct private-label container fulfillment for authorized commercial horse gear wholesalers and national distributors.
+          </p>
+        </div>
+
         {/* 3. Bottom disclaimer line */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-widest text-white/30 font-mono">
+        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-widest text-white/30 font-mono">
           <div>
             ISO 9001:2015 &amp; EN-8430 compliance certified
           </div>
