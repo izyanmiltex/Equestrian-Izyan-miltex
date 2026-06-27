@@ -53,12 +53,12 @@ export default function Hero({ onStartCustomizer }: HeroProps) {
 
         {/* Main Command Headline */}
         <h1 className="font-headline text-[31px] leading-tight md:text-[56px] md:leading-[1.1] text-white max-w-5xl tracking-tight uppercase mb-6 font-bold">
-          Tired of Supplier <br />
+          Stop Chasing Poor Suppliers— <br />
           <span className="text-primary-container brightness-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-            Quality Drops &amp; Poor Fitment?
+            We Absorb the Risk
           </span>
           <br />
-          <span className="text-white">Sourcing Risk to Our Wallet</span>
+          <span className="text-white">So You Don't Have To</span>
         </h1>
 
         {/* Subtitle */}
