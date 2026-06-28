@@ -37,7 +37,7 @@ export default function Hero({ onStartCustomizer }: HeroProps) {
         <img
           alt="Ultra-premium black oiled-leather English saddle"
           className="w-full h-full object-cover hero-bg-animate opacity-80 md:opacity-70 object-center"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLtZ-QoTsKC4AS2PQnptd56lbQqs2GPJkQfda09tf0fvBWDgVynbsP_KRHKt2sI2itxiOGWAxady7U7HcEks0LCFuH5ICIG5jDBsqpCeLWPqBhKar6Kgj56jSrcLM32HLErwgF1QFdgvEqrE5hlCqb3WqNQ1IL8blJAIeQ3eRfVRl8HwfI8v09gJiv7z7fUcCHgTk9y2u2tyb4R19CsLElXBEZgZ8Sr69FpP8lx9MzkKfcK2EpbgAvMbh18"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL-ftjHhogKSUcNgXlrP-ho-miRXQp6Se-W7I96obKGLZeajdKEPkAHcKfPhFOXLGQg59UO5pO7X0EoyrY5mx9Lia7hEILi1CS7OBF7vhGurZOmbrVsF8ghnGrDyAS0W26Xxudow2ss-C_0Zh5UaIJ4uYjTT2aKBuzTbAtdUn--hoP55eB_m8nF2v8eZBAdr3axsuDNK0KWqarAf5r5lBKkkmN8qwYZTVIgqTw6SiWXotwqvlRNnTe"
         />
         {/* Gradient Transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background z-10" />
@@ -63,7 +63,7 @@ export default function Hero({ onStartCustomizer }: HeroProps) {
 
         {/* Subtitle */}
         <p className="font-sans text-sm md:text-lg text-white/80 max-w-2xl mb-12 tracking-wide leading-relaxed font-light">
-          Provide your exact tech specs—we will handcraft and air-ship your physical prototype straight to your office desk at <span className="text-primary font-bold underline">$0 in 27 days</span>.
+          FREE Sample of Custom Prototype in 25 Days
         </p>
 
         {/* Call To Actions */}
@@ -72,7 +72,7 @@ export default function Hero({ onStartCustomizer }: HeroProps) {
             onClick={onStartCustomizer}
             className="btn-shimmer text-on-primary cursor-pointer px-[23px] py-[16px] sm:px-[25px] sm:py-[18px] font-headline text-[11px] sm:text-[13.2px] font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.03] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] sm:max-w-none sm:w-auto whitespace-nowrap mx-auto"
           >
-            Book My Free Prototype Call →
+            Book my FREE sample →
           </button>
           
           <div className="flex items-center justify-center gap-1.5 text-white font-sans text-[10px] sm:text-xs uppercase tracking-[0.08em] whitespace-nowrap mt-4">

@@ -16,9 +16,9 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Darragh McCarthy",
     role: "Director of Sourcing",
     company: "Dublin Saddle Co.",
-    content: "We were highly skeptical about the $0 physical prototype offer, but the custom anatomical saddle pad arrived in Dublin exactly 24 days later. The stitching precision and spacer-mesh core were flawless, leading to an immediate 800-unit container contract.",
+    content: "We were highly skeptical about the $0 physical sample offer, but the custom anatomical saddle pad arrived in Dublin exactly 24 days later. The stitching precision and spacer-mesh core were flawless, leading to an immediate 800-unit container contract.",
     rating: 3.5,
-    tags: ["Saddle Pad Line", "Free Prototype"]
+    tags: ["Saddle Pad Line", "Free Samples"]
   },
   {
     id: "review-2",

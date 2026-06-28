@@ -176,7 +176,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <div>
                   <textarea
                     required
-                    placeholder="What specific specifications or materials are you looking to prototype? *"
+                    placeholder="What specific specifications or materials are you looking to sample? *"
                     rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}

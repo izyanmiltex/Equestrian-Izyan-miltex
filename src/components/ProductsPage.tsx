@@ -157,7 +157,7 @@ export default function ProductsPage({ onConfigureProduct }: ProductsPageProps) 
                     <div className="flex-1 text-center sm:text-left mb-3 sm:mb-0">
                       <div className="flex items-center justify-center sm:justify-start gap-1.5 text-primary font-mono text-[10px] font-bold uppercase tracking-widest mb-1">
                         <Calendar className="w-3.5 h-3.5" />
-                        B2B Prototype Sourcing
+                        B2B Sourcing Samples
                       </div>
                       <p className="text-[11px] text-white/40 font-sans font-light">
                         Book a free design consultation call to customize materials, colors, and sizing details.
@@ -167,7 +167,7 @@ export default function ProductsPage({ onConfigureProduct }: ProductsPageProps) 
                       onClick={() => onConfigureProduct(product.id)}
                       className="btn-shimmer text-on-primary font-headline text-[10px] font-bold uppercase tracking-widest px-6 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.03] shadow-lg shrink-0 w-full sm:w-auto text-center cursor-pointer"
                     >
-                      Book My Free Prototype Call →
+                      Book my FREE sample →
                     </button>
                   </div>
                 </div>

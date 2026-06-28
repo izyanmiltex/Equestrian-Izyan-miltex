@@ -129,7 +129,7 @@ export default function App() {
             onClick={handleStartCustomizer}
             className="btn-shimmer text-on-primary cursor-pointer px-5 py-3.5 sm:py-4 font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.02] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] whitespace-nowrap mx-auto"
           >
-            Book My Free Prototype Call →
+            Book my FREE sample →
           </button>
           <div className="flex items-center justify-center gap-1.5 text-white font-sans text-[10px] uppercase tracking-[0.08em] whitespace-nowrap">
             <Bell className="w-3.5 h-3.5 text-primary shrink-0 animate-pulse" />

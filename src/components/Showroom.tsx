@@ -418,7 +418,7 @@ export default function Showroom({ onConfigureProduct }: ShowroomProps) {
                 onClick={() => onConfigureProduct(activeProduct.id)}
                 className="btn-shimmer text-on-primary cursor-pointer px-5 py-3.5 sm:py-4 font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.03] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] sm:max-w-none sm:w-auto whitespace-nowrap mx-auto"
               >
-                Book My Free Prototype Call →
+                Book my FREE sample →
               </button>
               
               <div className="flex flex-col items-center gap-2">

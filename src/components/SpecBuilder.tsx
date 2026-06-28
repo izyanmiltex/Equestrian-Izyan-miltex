@@ -73,10 +73,10 @@ export default function SpecBuilder({ preselectedProductId, onResetPreselection 
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <span className="text-primary text-xs font-bold uppercase tracking-[0.25em] mb-3 block">
-            Equestrian Prototype Hub
+            Equestrian Samples Hub
           </span>
           <h2 className="font-headline text-3xl md:text-5xl font-bold uppercase tracking-tight text-white mb-4">
-            Claim Your Free Custom Prototype Run
+            Claim Your Free Sample Now
           </h2>
           <p className="font-sans text-sm text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
             Choose your date and secure your 10-minute technical engineering alignment call. Handcrafted and express-shipped to your desk at zero obligation.

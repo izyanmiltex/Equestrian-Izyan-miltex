@@ -30,7 +30,7 @@ export default function RiskAssessment({ onStartCustomizer }: RiskAssessmentProp
             </h2>
           </div>
           <p className="font-sans text-sm text-white/50 max-w-sm font-light">
-            Toggle the common defects and importing headaches below to see the rigorous engineering solutions we bake directly into your free physical prototypes.
+            Toggle the common defects and importing headaches below to see the rigorous engineering solutions we bake directly into your free samples.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function RiskAssessment({ onStartCustomizer }: RiskAssessmentProp
               statVal = "316";
               statLabel = "Stainless Steel Grade";
             } else if (factor.id === "delivery") {
-              statVal = "27";
+              statVal = "25";
               statLabel = "Days Sourcing Delivery Guarantee";
             } else if (factor.id === "moq") {
               statVal = "-50%";
@@ -147,7 +147,7 @@ export default function RiskAssessment({ onStartCustomizer }: RiskAssessmentProp
                         onClick={onStartCustomizer}
                         className="btn-shimmer text-on-primary cursor-pointer px-5 py-3.5 sm:py-4 font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.03] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] sm:max-w-none sm:w-auto whitespace-nowrap mx-auto"
                       >
-                        Book My Free Prototype Call →
+                        Book my FREE sample →
                       </button>
                       <div className="flex items-center justify-center gap-1.5 text-white font-sans text-[10px] sm:text-xs uppercase tracking-[0.08em] whitespace-nowrap">
                         <Bell className="w-3.5 h-3.5 text-primary shrink-0 animate-pulse" />
@@ -272,7 +272,7 @@ export default function RiskAssessment({ onStartCustomizer }: RiskAssessmentProp
                     {activeFactor.id === "fitment" && "100%"}
                     {activeFactor.id === "quality" && "0"}
                     {activeFactor.id === "hardware" && "316"}
-                    {activeFactor.id === "delivery" && "27"}
+                    {activeFactor.id === "delivery" && "25"}
                     {activeFactor.id === "moq" && "-45%"}
                   </div>
                   <div className="text-[10px] text-white/50 uppercase font-bold tracking-widest leading-tight">
@@ -295,7 +295,7 @@ export default function RiskAssessment({ onStartCustomizer }: RiskAssessmentProp
                   onClick={onStartCustomizer}
                   className="btn-shimmer text-on-primary cursor-pointer px-5 py-3.5 sm:py-4 font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.03] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] sm:max-w-none sm:w-auto whitespace-nowrap mx-auto"
                 >
-                  Book My Free Prototype Call →
+                  Book my FREE sample →
                 </button>
                 <div className="flex items-center justify-center gap-1.5 text-white font-sans text-[10px] sm:text-xs uppercase tracking-[0.08em] whitespace-nowrap">
                   <Bell className="w-3.5 h-3.5 text-primary shrink-0 animate-pulse" />

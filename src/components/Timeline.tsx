@@ -64,7 +64,7 @@ export default function Timeline({ onStartCustomizer }: TimelineProps) {
       period: "Days 15 – 21",
       icon: <Truck className="w-5 h-5 text-primary" />,
       detailTitle: "Express air shipping to your desk",
-      desc: "We double-wrap your completed physical prototype and ship it directly to your corporate desk. Sourcing and custom brokers manage all clearing. Final invoice cost to you: $0.",
+      desc: "We double-wrap your completed physical sample and ship it directly to your corporate desk. Sourcing and custom brokers manage all clearing. Final invoice cost to you: $0.",
       documents: ["Express Priority Air Waybill", "Live DHL/FedEx Tracker Feed", "Zero-Cost Proforma Invoice"]
     }
   ];
@@ -227,7 +227,7 @@ export default function Timeline({ onStartCustomizer }: TimelineProps) {
                 2-Year Territorial Exclusivity Contract
               </h4>
               <p className="text-xs text-white/70 font-light leading-relaxed">
-                If the physical prototype aligns perfectly with your parameters, your brand qualifies for our territorial exclusivity arrangement. We secure your target markets so your competitive advantage remains locked under key.
+                If the physical sample aligns perfectly with your parameters, your brand qualifies for our territorial exclusivity arrangement. We secure your target markets so your competitive advantage remains locked under key.
               </p>
             </div>
             <div className="p-6 rounded-full bg-primary/10 border border-primary/20 text-primary flex-shrink-0">
@@ -241,7 +241,7 @@ export default function Timeline({ onStartCustomizer }: TimelineProps) {
               onClick={onStartCustomizer}
               className="btn-shimmer text-on-primary cursor-pointer px-5 py-3.5 sm:py-4 font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 hover:scale-[1.03] shadow-2xl text-center flex items-center justify-center w-full max-w-[320px] sm:max-w-none sm:w-auto whitespace-nowrap mx-auto"
             >
-              Book My Free Prototype Call →
+              Book my FREE sample →
             </button>
             <div className="flex items-center justify-center gap-1.5 text-white font-sans text-[10px] sm:text-xs uppercase tracking-[0.08em] whitespace-nowrap">
               <Bell className="w-3.5 h-3.5 text-primary shrink-0 animate-pulse" />

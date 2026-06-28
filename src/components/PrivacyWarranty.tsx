@@ -14,7 +14,7 @@ export default function PrivacyWarranty({ onBack }: PrivacyWarrantyProps) {
     {
       title: "Mutual NDA Integration",
       subtitle: "Absolute IP Exclusivity",
-      desc: "All custom shoe molds, bespoke fitment modifications, outsole tread prints, and package brand stamp files remain 100% exclusive. We sign rigid mutual international NDAs prior to physical prototype milling."
+      desc: "All custom shoe molds, bespoke fitment modifications, outsole tread prints, and package brand stamp files remain 100% exclusive. We sign rigid mutual international NDAs prior to physical sample milling."
     },
     {
       title: "Leather Tearing Protection",

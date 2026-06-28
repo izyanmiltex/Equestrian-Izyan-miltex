@@ -145,7 +145,7 @@ export const MITIGATION_FACTORS = [
     id: "delivery",
     painpoint: "Uncertain Lead Times & Prototyping Delay",
     cause: "Lengthy negotiating periods, slow sample creation, and postal service blackouts.",
-    mitigation: "We handcraft and air-ship your customized physical prototype straight to your office desk in 27 days at exactly $0, with live DHL/FedEx status feeds.",
+    mitigation: "We handcraft and air-ship your customized physical samples straight to your office desk in 25 days at exactly $0, with live DHL/FedEx status feeds.",
     icon: "flight_takeoff"
   },
   {
@@ -176,7 +176,7 @@ export const FAQS = [
   {
     id: "faq-1",
     category: "Pricing",
-    question: "How can you offer $0 prototyping?",
+    question: "How can you offer free samples?",
     answer: "We absorb 100% of the R&D, blueprint, pattern-making, and physical assembly costs because we have complete skin in the game. Our specialized manufacturing system enables us to construct initial custom physical samples without capital commitment from you, proving our superior b2b equestrian sourcing-grade quality."
   },
   {
@@ -200,7 +200,7 @@ export const FAQS = [
   {
     id: "faq-5",
     category: "Logistics",
-    question: "How is shipping handled for production and prototypes?",
-    answer: "Initial prototypes are sent via express air-couriers (DHL/FedEx/UPS) completely free, arriving within 27 days from the spec sheet sign-off. Bulk orders are processed via trusted maritime or priority air cargo channels based on your target distribution timeline, accompanied by comprehensive customs brokerage clearance documentation."
+    question: "How is shipping handled for production and samples?",
+    answer: "Initial samples are sent via express air-couriers (DHL/FedEx/UPS) completely free, arriving within 25 days from the spec sheet sign-off. Bulk orders are processed via trusted maritime or priority air cargo channels based on your target distribution timeline, accompanied by comprehensive customs brokerage clearance documentation."
   }
 ];

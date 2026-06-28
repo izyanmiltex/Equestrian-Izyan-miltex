@@ -190,7 +190,7 @@ export default function Header({ onStartCustomizer, onNavigate, activePage }: He
             <div className="h-[1px] bg-white/10 my-2"></div>
             <div className="flex justify-center items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest animate-pulse">
               <ShieldCheck className="w-4 h-4" />
-              Risk-Free Prototype Runs
+              Risk-Free Sample Runs
             </div>
           </div>
         </div>
